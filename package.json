@@ -1,0 +1,54 @@
+{
+  "name": "wColor256",
+  "version": "0.3.0",
+  "license": "MIT",
+  "description": "Module in JavaScript providing convenient means for color conversion. Aware about 256 color names.",
+  "author": "Kostiantyn Wandalen <wtory.net@domainsbyproxy.com>",
+  "contributors": [
+    {
+      "name": "Kostiantyn Wandalen",
+      "email": "wtory.net@domainsbyproxy.com>"
+    },
+    {
+      "name": "Volodymyr M.",
+      "email": "volodymyr.migdal@gmail.com"
+    }
+  ],
+  "main": "staging/amid/color/Color256.s",
+  "files": [
+    "staging/amid/color",
+    "production"
+  ],
+  "directories": {
+    "doc": "doc",
+    "main": "staging/amid/color/Color256.s"
+  },
+  "scripts": {
+    "make_doc": "./doc.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Wandalen/wColor.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Wandalen/wColor/issues"
+  },
+  "dependencies": {
+    "wTools": "",
+    "wColor": ""
+  },
+  "devDependencies": {
+    "wTesting": ""
+  },
+  "keywords": [
+    "wTools",
+    "color",
+    "colors",
+    "colorful",
+    "color conversion",
+    "convert color",
+    "rgb",
+    "rgba",
+    "hsl"
+  ]
+}
