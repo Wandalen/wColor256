@@ -15,7 +15,7 @@ if( typeof module !== 'undefined' )
     require( 'wTools' );
   }
 
-  requre( 'wColor' );
+  require( 'wColor' );
 
 }
 
