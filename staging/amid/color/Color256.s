@@ -15,7 +15,14 @@ if( typeof module !== 'undefined' )
     require( 'wTools' );
   }
 
-  require( 'wColor' );
+  try
+  {
+    require( './Color.s' );
+  }
+  catch( err )
+  {
+    require( 'wColor' );
+  }
 
 }
 
@@ -53,7 +60,16 @@ var Proto =
 
 }
 
-_.mapSupplement( wTools,Proto );
-_.mapSupplement( wTools.ColorMap,ColorMap );
+//
+
+if( !wTools.color )
+{
+  wTools.color = Proto;
+}
+else
+{
+  _.mapSupplement( wTools.color,Proto );
+  _.mapSupplement( wTools.color.ColorMap,ColorMap );
+}
 
 })();
