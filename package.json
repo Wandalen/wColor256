@@ -1,6 +1,7 @@
 {
   "name": "wColor256",
   "version": "0.3.3",
+  "engine" : "node >= 5.0.0",
   "license": "MIT",
   "description": "Module in JavaScript providing convenient means for color conversion. Aware about 256 color names.",
   "author": "Kostiantyn Wandalen <wtory.net@domainsbyproxy.com>",
@@ -24,6 +25,7 @@
     "main": "staging/amid/color/Color256.s"
   },
   "scripts": {
+    "test": "wtest staging",
     "make_doc": "./doc.sh"
   },
   "repository": {
