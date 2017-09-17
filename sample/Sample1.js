@@ -1,7 +1,7 @@
 
 if( typeof module !== 'undefined' )
 require( 'wColor256' );
-//require( '../staging/amid/color/Color256.s' );
+//require( '../staging/dwtools/amid/color/Color256.s' );
 
 var _ = wTools;
 

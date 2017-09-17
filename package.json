@@ -1,7 +1,7 @@
 {
   "name": "wColor256",
   "version": "0.3.4",
-  "engine": "node >= 5.0.0",
+  "engine": "node >= 6.0.0",
   "license": "MIT",
   "description": "Module in JavaScript providing convenient means for color conversion. Aware about 256 color names.",
   "author": "Kostiantyn Wandalen <wtory.net@domainsbyproxy.com>",
@@ -15,14 +15,14 @@
       "email": "volodymyr.migdal@gmail.com"
     }
   ],
-  "main": "staging/amid/color/Color256.s",
+  "main": "staging/dwtools/amid/color/Color256.s",
   "files": [
-    "staging/amid/color",
+    "staging/dwtools/amid/color",
     "production"
   ],
   "directories": {
     "doc": "doc",
-    "main": "staging/amid/color/Color256.s"
+    "main": "staging/dwtools/amid/color/Color256.s"
   },
   "scripts": {
     "test": "wtest staging",
