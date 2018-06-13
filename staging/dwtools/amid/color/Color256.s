@@ -321,7 +321,7 @@ var ColorMap =
 }
 
 // --
-// prototype
+// define class
 // --
 
 var Proto =
