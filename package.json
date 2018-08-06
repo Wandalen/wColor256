@@ -1,14 +1,15 @@
 {
   "name": "wColor256",
   "version": "0.3.19",
+  "enabled": 0,
   "engine": "node >= 6.0.0",
   "license": "MIT",
-  "description": "The module in JavaScript provides convenient means for color conversion. Aware about 256 color names.",
+  "description": "Collection of routines to operate colors conveniently. Extends basic implementation Color by additional color names. Color provides functions to convert color from one color space to another color space, from name to color and from color to the closest name of a color. The module does not introduce any specific storage format of color what is a benefit. Color has a short list of the most common colors. Use the module for formatted colorful output or other sophisticated operations with colors.",
   "author": "Kostiantyn Wandalen <wanalen@willbe.so>",
   "contributors": [
     {
       "name": "Kostiantyn Wandalen",
-      "email": "wanalen@willbe.so>"
+      "email": "wanalen@willbe.so"
     },
     {
       "name": "Volodymyr M.",
