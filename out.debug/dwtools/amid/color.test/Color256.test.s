@@ -38,7 +38,7 @@ var _ = wTools;
 function check( test )
 {
   var colors = _.mapOwnKeys( _.color.ColorMap );
-  test.shouldBe( colors.length >= 200 );
+  test.is( colors.length >= 200 );
 }
 
 //
@@ -58,8 +58,8 @@ var Self =
 
 //
 
-Self = wTestSuit( Self );
+Self = wTestSuite( Self );
 if( typeof module !== 'undefined' && !module.parent )
-_.Tester.test( Self.name );
+wTester.test( Self.name );
 
 } )( );
