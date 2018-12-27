@@ -41,8 +41,7 @@
     "wColor": ""
   },
   "devDependencies": {
-    "wTesting": "",
-    "wColor256": "."
+    "wTesting": ""
   },
   "keywords": [
     "wTools",
