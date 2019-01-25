@@ -57,11 +57,13 @@ path:
       - .
       - ./dwtools
       - ./dwtools/Tools.s
+      - ./dwtools/abase
       - ./dwtools/amid
       - ./dwtools/amid/color
       - ./dwtools/amid/color/Color256.s
       - ./dwtools/amid/color.test
       - ./dwtools/amid/color.test/Color256.test.s
+      - ./dwtools/atop
     criterion:
       default: 1
       debug: 1
