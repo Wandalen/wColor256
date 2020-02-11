@@ -5,7 +5,7 @@ Collection of routines to operate colors conveniently. Extends basic implementat
 ### Try out
 ```
 npm install
-node sample/Sample.s
+node sample/Sample.js
 ```
 
 
