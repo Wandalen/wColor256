@@ -173,6 +173,7 @@ module:
           export: 1
         path:
           - ../proto
+          - ../proto/Integration.test.s
           - ../proto/dwtools
           - ../proto/dwtools/Tools.s
           - ../proto/dwtools/abase
@@ -1525,6 +1526,4 @@ module:
       ../.im.will.yml:
         hash: 09b79ca93a91ea418146f0a77a9dd7a4
         size: 5004
-      wColor256.out.will.yml:
-        hash: ebb08062a6c9a47048c0f9ab3795aeef
-        size: 39076
+      wColor256.out.will.yml: *ref_0
