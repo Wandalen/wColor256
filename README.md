@@ -1,4 +1,4 @@
-# module::Color256 [![Status](https://github.com/Wandalen/wColor256/workflows/Test/badge.svg)](https://github.com/Wandalen/wColor256/actions?query=workflow%3ATest) [![experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](https://github.com/emersion/stability-badges#experimental)
+# module::Color256 [![Status](https://github.com/Wandalen/wColor256/workflows/Publish/badge.svg)](https://github.com/Wandalen/wColor256/actions?query=workflow%3APublish) [![experimental](https://img.shields.io/badge/stability-experimental-orange.svg)](https://github.com/emersion/stability-badges#experimental)
 
 Collection of routines to operate colors conveniently. Extends basic implementation Color by additional color names. Color provides functions to convert color from one color space to another color space, from name to color and from color to the closest name of a color. The module does not introduce any specific storage format of color what is a benefit. Color has a short list of the most common colors. Use the module for formatted colorful output or other sophisticated operations with colors.
 
