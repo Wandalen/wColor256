@@ -2,15 +2,12 @@ format: outwillfile-2.0
 root:
   - wColor256.out
 consistency:
-  wColor256.out.will.yml: &ref_0
-    hash: ebb08062a6c9a47048c0f9ab3795aeef
-    size: 39076
-  ../.ex.will.yml: &ref_1
-    hash: cbd138443d982f7c5b8ab6761ea1fe23
-    size: 2374
-  ../.im.will.yml: &ref_2
-    hash: 09b79ca93a91ea418146f0a77a9dd7a4
-    size: 5004
+  ../.ex.will.yml: &ref_0
+    hash: 1805eacab2ee6be265faa7997fa5eeea
+    size: 2373
+  ../.im.will.yml: &ref_1
+    hash: 1ac04c197248910b5efd1c9e00adf00b
+    size: 5001
 module:
   wColor256.out:
     about:
@@ -26,11 +23,11 @@ module:
         formatted colorful output or other sophisticated operations with colors.
       enabled: 1
       version: 0.4.0
-      interpreters:
+      interpreters: &ref_2
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
+      keywords: &ref_3
         - wTools
         - color
         - colors
@@ -42,14 +39,14 @@ module:
         - hsl
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@01.school>
         - Volodymyr M. <volodymyr.migdal@gmail.com>
       npm.name: wColor256
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
-      npm.directories:
+      npm.directories: &ref_6
         doc: doc
         main: proto/wtools/amid/color/Color256.s
     path:
@@ -617,7 +614,7 @@ module:
           debug: release
       reflect.proto.debug.raw:
         opts:
-          filePath: 'reflector::reflect.proto*'
+          filePath: 'reflector::reflect.proto.debug.raw'
         criterion:
           tests: no.tests
           debug: debug
@@ -627,7 +624,7 @@ module:
           - files.reflect
       reflect.proto.release.raw:
         opts:
-          filePath: 'reflector::reflect.proto*'
+          filePath: 'reflector::reflect.proto.release.raw'
         criterion:
           tests: no.tests
           debug: release
@@ -637,7 +634,7 @@ module:
           - files.reflect
       reflect.proto.debug.compiled:
         opts:
-          filePath: 'reflector::reflect.proto*'
+          filePath: 'reflector::reflect.proto.debug.compiled'
         criterion:
           tests: no.tests
           debug: debug
@@ -647,7 +644,7 @@ module:
           - files.reflect
       reflect.proto.release.compiled:
         opts:
-          filePath: 'reflector::reflect.proto*'
+          filePath: 'reflector::reflect.proto.release.compiled'
         criterion:
           tests: no.tests
           debug: release
@@ -658,7 +655,7 @@ module:
       transpile.proto.raw:
         opts:
           entry: 'path::entry.proto.no.tests'
-          filePath: 'reflector::transpile.proto.raw*'
+          filePath: 'reflector::transpile.proto.raw'
         criterion:
           raw: raw
           debug: release
@@ -668,7 +665,7 @@ module:
       transpile.proto.no.tests.compiled.debug:
         opts:
           entry: 'path::entry.proto.*=1'
-          filePath: 'reflector::transpile.proto.no.tests.compiled*'
+          filePath: 'reflector::transpile.proto.no.tests.compiled.debug'
         criterion:
           tests: no.tests
           raw: compiled
@@ -679,7 +676,7 @@ module:
       transpile.proto.no.tests.compiled.release:
         opts:
           entry: 'path::entry.proto.*=1'
-          filePath: 'reflector::transpile.proto.no.tests.compiled*'
+          filePath: 'reflector::transpile.proto.no.tests.compiled.release'
         criterion:
           tests: no.tests
           raw: compiled
@@ -691,7 +688,7 @@ module:
         opts:
           entry: 'path::entry.proto.*=1'
           external.before: '{path::out.*=1}/Main.s'
-          filePath: 'reflector::transpile.proto.only.tests.compiled*'
+          filePath: 'reflector::transpile.proto.only.tests.compiled.debug'
         criterion:
           tests: only.tests
           raw: compiled
@@ -703,7 +700,7 @@ module:
         opts:
           entry: 'path::entry.proto.*=1'
           external.before: '{path::out.*=1}/Main.s'
-          filePath: 'reflector::transpile.proto.only.tests.compiled*'
+          filePath: 'reflector::transpile.proto.only.tests.compiled.release'
         criterion:
           tests: only.tests
           raw: compiled
@@ -711,24 +708,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          filePath: 'reflector::exported.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          filePath: 'reflector::exported.files.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -817,9 +796,8 @@ module:
           content: proto
           export: 1
     consistency:
-      wColor256.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wColor256
@@ -834,32 +812,14 @@ module:
         formatted colorful output or other sophisticated operations with colors.
       enabled: 1
       version: 0.4.0
-      interpreters:
-        - njs >= 10.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - wTools
-        - color
-        - colors
-        - colorful
-        - color conversion
-        - convert color
-        - rgb
-        - rgba
-        - hsl
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@01.school>
-        - Volodymyr M. <volodymyr.migdal@gmail.com>
+      contributors: *ref_4
       npm.name: wColor256
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
-      npm.directories:
-        doc: doc
-        main: proto/wtools/amid/color/Color256.s
+      npm.scripts: *ref_5
+      npm.directories: *ref_6
     path:
       module.willfiles:
         criterion:
@@ -1521,9 +1481,8 @@ module:
           - 'build::npm'
     consistency:
       ../.ex.will.yml:
-        hash: cbd138443d982f7c5b8ab6761ea1fe23
-        size: 2374
+        hash: 1805eacab2ee6be265faa7997fa5eeea
+        size: 2373
       ../.im.will.yml:
-        hash: 09b79ca93a91ea418146f0a77a9dd7a4
-        size: 5004
-      wColor256.out.will.yml: *ref_0
+        hash: 1ac04c197248910b5efd1c9e00adf00b
+        size: 5001
