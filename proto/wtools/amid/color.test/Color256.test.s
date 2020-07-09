@@ -8,7 +8,7 @@ to run this test
 from the project directory run
 
 npm install
-node ./staging/dwtools/amid/z.test/Color256.test.s
+node ./staging/wtools/amid/z.test/Color256.test.s
 
 */
 
