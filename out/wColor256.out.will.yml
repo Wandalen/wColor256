@@ -1526,6 +1526,4 @@ module:
       ../.im.will.yml:
         hash: 1ac04c197248910b5efd1c9e00adf00b
         size: 5001
-      wColor256.out.will.yml:
-        hash: e9f46c286beec20910068e595f752f9e
-        size: 39246
+      wColor256.out.will.yml: *ref_0
