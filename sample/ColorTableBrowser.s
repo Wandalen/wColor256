@@ -1,4 +1,4 @@
-var _ = wTools;
+let _ = wTools;
 var names = _.mapOwnKeys( _.color.ColorMap ).sort();
 var table = document.createElement('table');
 var tr;

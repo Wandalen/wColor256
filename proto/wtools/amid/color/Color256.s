@@ -16,14 +16,14 @@ if( typeof module !== 'undefined' )
 
   require( '../../../wtools/Tools.s' );
 
-  var _ = _global_.wTools;
+  let _ = _global_.wTools;
 
   _.include( 'wColor' )
 
 }
 
-var _ = _global_.wTools;
-var Self = _global_.wTools;
+let _ = _global_.wTools;
+let Self = _global_.wTools;
 
 // --
 // var

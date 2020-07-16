@@ -26,12 +26,12 @@ if( typeof module !== 'undefined' )
 
   require( '../color/Color256.s' );
 
-  var _ = wTools;
+  let _ = wTools;
   _.include( 'wTesting' );
 
 }
 
-var _ = wTools;
+let _ = wTools;
 
 //
 
@@ -43,7 +43,7 @@ function check( test )
 
 //
 
-var Self =
+let Self =
 {
 
   name : 'Color256',
