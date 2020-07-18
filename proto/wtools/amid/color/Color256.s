@@ -7,27 +7,54 @@
   @module Tools/mid/Color256
 */
 
-/**
- * @file Color256.s.
- */
-
 if( typeof module !== 'undefined' )
 {
-
-  require( '../../../wtools/Tools.s' );
-
-  let _ = _global_.wTools;
-
-  _.include( 'wColor' )
-
+  let _ = require( '../../../wtools/Tools.s' );
+  _.include( 'wColor' );
 }
 
 let _ = _global_.wTools;
-let Self = _global_.wTools;
+let Self = _.color = _.color || Object.create( null );
 
 // --
 // var
 // --
+
+let ColorMapShell =
+{
+  'white'           : [ 1.0, 1.0, 1.0 ],
+  'black'           : [ 0.0, 0.0, 0.0 ],
+  'green'           : [ 0.0, 1.0, 0.0 ],
+  'red'             : [ 1.0, 0.0, 0.0 ],
+  'yellow'          : [ 1.0, 1.0, 0.0 ],
+  'blue'            : [ 0.0, 0.0, 1.0 ],
+  'cyan'            : [ 0.0, 1.0, 1.0 ],
+  'magenta'         : [ 1.0, 0.0, 1.0 ],
+
+  'bright black'    : [ 0.5, 0.5, 0.5 ],
+
+  'dark yellow'     : [ 0.5, 0.5, 0.0 ],
+  'dark red'        : [ 0.5, 0.0, 0.0 ],
+  'dark magenta'    : [ 0.5, 0.0, 0.5 ],
+  'dark blue'       : [ 0.0, 0.0, 0.5 ],
+  'dark cyan'       : [ 0.0, 0.5, 0.5 ],
+  'dark green'      : [ 0.0, 0.5, 0.0 ],
+  'dark white'      : [ 0.9, 0.9, 0.9 ],
+
+  'bright white'    : [ 1.0, 1.0, 1.0 ], /* white */
+  'bright green'    : [ 0.0, 1.0, 0.0 ], /* green */
+  'bright red'      : [ 1.0, 0.0, 0.0 ], /* red */
+  'bright yellow'   : [ 1.0, 1.0, 0.0 ], /* yellow */
+  'bright blue'     : [ 0.0, 0.0, 1.0 ], /* blue */
+  'bright cyan'     : [ 0.0, 1.0, 1.0 ], /* cyan */
+  'bright magenta'  : [ 1.0, 0.0, 1.0 ], /* magenta */
+
+  'dark black'      : [ 0.0, 0.0, 0.0 ], /* black */
+
+  'silver'          : [ 0.9, 0.9, 0.9 ] /* dark white */
+}
+
+//
 
 var ColorMap =
 {
@@ -318,32 +345,23 @@ var ColorMap =
 // declare
 // --
 
-var Proto =
+var Extension =
 {
 
-  ColorMap : ColorMap,
+  ColorMapShell,
+  ColorMap,
 
 }
 
 //
 
-if( !_.color )
-{
-  _.color = Proto;
-}
-else
-{
-  _.mapSupplement( _.color,Proto );
-  _.mapSupplement( _.color.ColorMap,ColorMap );
-}
+_.mapSupplement( _.color, Extension );
+_.mapSupplement( _.color.ColorMap, ColorMap );
+_.mapSupplement( _.color.ColorMap, ColorMapShell );
 
 // --
 // export
 // --
-
-if( typeof module !== 'undefined' )
-if( _global_.WTOOLS_PRIVATE )
-{ /* delete require.cache[ module.id ]; */ }
 
 if( typeof module !== 'undefined' )
 module[ 'exports' ] = Self;
