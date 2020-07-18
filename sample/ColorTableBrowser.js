@@ -1,6 +1,6 @@
 
 if( typeof module !== 'undefined' )
-require( 'wcolor256' );
+require( 'wColor256' );
 
 let _ = wTools;
 var names = _.mapOwnKeys( _.color.ColorMap ).sort();

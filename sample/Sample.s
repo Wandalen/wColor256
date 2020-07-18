@@ -1,6 +1,6 @@
 
 if( typeof module !== 'undefined' )
-require( 'wcolor256' );
+require( 'wColor256' );
 
 let _ = wTools;
 
