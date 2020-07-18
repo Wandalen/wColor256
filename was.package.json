@@ -13,14 +13,14 @@
   "main" : "proto/wtools/amid/color/Color256.s",
   "files" : [ "proto/wtools/amid/color", "proto/wtools/Tools.s", "out" ],
   "directories" : { "doc" : "doc", "main" : "proto/wtools/amid/color/Color256.s" },
-  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-3", "docgen" : "wdocgen proto" },
+  "scripts" : { "test" : "wtest .run 'proto/**' rapidity:-1", "docgen" : "wdocgen proto" },
   "repository" : { "type" : "git", "url" : "https://github.com/Wandalen/wColor.git" },
   "bugs" :
   {
     "url" : "https://github.com/Wandalen/wColor/issues"
   },
   "dependencies" : { "wTools" : "", "wColor" : "" },
-  "devDependencies" : { "wTesting" : "" },
+  "devDependencies" : { "wTesting" : "", "eslint" : "=7.1.0", "wcolor256" : "file:." }, 
   "keywords" :
   [
     "wTools",

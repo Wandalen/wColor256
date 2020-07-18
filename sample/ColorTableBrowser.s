@@ -1,3 +1,7 @@
+
+if( typeof module !== 'undefined' )
+require( 'wcolor256' );
+
 let _ = wTools;
 var names = _.mapOwnKeys( _.color.ColorMap ).sort();
 var table = document.createElement('table');
@@ -30,6 +34,3 @@ names.forEach( ( n, i ) =>
   document.getElementById( i ).onclick = () => alert( 'name : ' + n + '\n' + 'rgb : ' + _.color.ColorMap[ n ] )
   document.getElementById( i ).setAttribute( 'style', 'text-align: center;color : white;background-color :' + _.color.colorToHex( _.color.ColorMap[ n ] ))
 });
-
-
-
