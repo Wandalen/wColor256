@@ -59,7 +59,7 @@ let ColorMapShell =
 var ColorMap =
 {
   "aquamarine"                    : [ 0.5,1.0,0.83 ],
-  "twilight blue"                 : [ 0.94,1.0,1.0 ],
+  "light blue"                    : [ 0.94,1.0,1.0 ],
   "beige"                         : [ 0.96,0.96,0.86 ],
   "bisque"                        : [ 1.0,0.89,0.77 ],
   "chocolate"                     : [ 0.82,0.41,0.12 ],
