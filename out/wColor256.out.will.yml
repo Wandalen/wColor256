@@ -2,13 +2,10 @@ format: outwillfile-2.0
 root:
   - wColor256.out
 consistency:
-  wColor256.out.will.yml: &ref_0
-    hash: e9f46c286beec20910068e595f752f9e
-    size: 39246
-  ../.ex.will.yml: &ref_1
-    hash: 1805eacab2ee6be265faa7997fa5eeea
-    size: 2373
-  ../.im.will.yml: &ref_2
+  ../.ex.will.yml: &ref_0
+    hash: 4a5c5dddcdc78ea50319fe874a4e2ff8
+    size: 2388
+  ../.im.will.yml: &ref_1
     hash: 1ac04c197248910b5efd1c9e00adf00b
     size: 5001
 module:
@@ -17,20 +14,21 @@ module:
       name: wColor256
       org: noorg
       description: >-
-        Collection of cross-platform routines to operate colors conveniently. Extends basic
-        implementation Color by additional color names. Color provides functions
-        to convert color from one color space to another color space, from name
-        to color and from color to the closest name of a color. The module does
-        not introduce any specific storage format of color what is a benefit.
-        Color has a short list of the most common colors. Use the module for
-        formatted colorful output or other sophisticated operations with colors.
+        Collection of cross-platform routines to operate colors conveniently.
+        Extends basic implementation Color by additional color names. Color
+        provides functions to convert color from one color space to another
+        color space, from name to color and from color to the closest name of a
+        color. The module does not introduce any specific storage format of
+        color what is a benefit. Color has a short list of the most common
+        colors. Use the module for formatted colorful output or other
+        sophisticated operations with colors.
       enabled: 1
       version: 0.4.0
-      interpreters:
+      interpreters: &ref_2
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
+      keywords: &ref_3
         - wTools
         - color
         - colors
@@ -42,14 +40,14 @@ module:
         - hsl
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@01.school>
         - Volodymyr M. <volodymyr.migdal@gmail.com>
       npm.name: wColor256
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
-      npm.directories:
+      npm.directories: &ref_6
         doc: doc
         main: proto/wtools/amid/color/Color256.s
     path:
@@ -711,24 +709,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          filePath: 'reflector::exported.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          filePath: 'reflector::exported.files.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -817,49 +797,31 @@ module:
           content: proto
           export: 1
     consistency:
-      wColor256.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wColor256
       org: noorg
       description: >-
-        Collection of cross-platform routines to operate colors conveniently. Extends basic
-        implementation Color by additional color names. Color provides functions
-        to convert color from one color space to another color space, from name
-        to color and from color to the closest name of a color. The module does
-        not introduce any specific storage format of color what is a benefit.
-        Color has a short list of the most common colors. Use the module for
-        formatted colorful output or other sophisticated operations with colors.
+        Collection of cross-platform routines to operate colors conveniently.
+        Extends basic implementation Color by additional color names. Color
+        provides functions to convert color from one color space to another
+        color space, from name to color and from color to the closest name of a
+        color. The module does not introduce any specific storage format of
+        color what is a benefit. Color has a short list of the most common
+        colors. Use the module for formatted colorful output or other
+        sophisticated operations with colors.
       enabled: 1
       version: 0.4.0
-      interpreters:
-        - njs >= 10.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - wTools
-        - color
-        - colors
-        - colorful
-        - color conversion
-        - convert color
-        - rgb
-        - rgba
-        - hsl
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@01.school>
-        - Volodymyr M. <volodymyr.migdal@gmail.com>
+      contributors: *ref_4
       npm.name: wColor256
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
-      npm.directories:
-        doc: doc
-        main: proto/wtools/amid/color/Color256.s
+      npm.scripts: *ref_5
+      npm.directories: *ref_6
     path:
       module.willfiles:
         criterion:
@@ -1521,9 +1483,8 @@ module:
           - 'build::npm'
     consistency:
       ../.ex.will.yml:
-        hash: 1805eacab2ee6be265faa7997fa5eeea
-        size: 2373
+        hash: 4a5c5dddcdc78ea50319fe874a4e2ff8
+        size: 2388
       ../.im.will.yml:
         hash: 1ac04c197248910b5efd1c9e00adf00b
         size: 5001
-      wColor256.out.will.yml: *ref_0
