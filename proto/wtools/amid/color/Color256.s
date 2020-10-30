@@ -39,7 +39,7 @@ let ColorMapShell =
   'dark blue'       : [ 0.0, 0.0, 0.5 ],
   'dark cyan'       : [ 0.0, 0.5, 0.5 ],
   'dark green'      : [ 0.0, 0.5, 0.0 ],
-  'dark white'      : [ 0.9, 0.9, 0.9 ],
+  'dark white'      : [ 0.75, 0.75, 0.75 ],
 
   'bright white'    : [ 1.0, 1.0, 1.0 ], /* white */
   'bright green'    : [ 0.0, 1.0, 0.0 ], /* green */
@@ -50,8 +50,7 @@ let ColorMapShell =
   'bright magenta'  : [ 1.0, 0.0, 1.0 ], /* magenta */
 
   'dark black'      : [ 0.0, 0.0, 0.0 ], /* black */
-
-  'silver'          : [ 0.9, 0.9, 0.9 ] /* dark white */
+  'silver'          : [ 0.75, 0.75, 0.75 ] /* dark white */
 }
 
 //
