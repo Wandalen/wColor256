@@ -37,7 +37,7 @@ let _ = wTools;
 
 function check( test )
 {
-  var colors = _.mapOwnKeys( _.color.ColorMap );
+  var colors = _.mapOnlyOwnKeys( _.color.ColorMap );
   test.true( colors.length >= 200 );
 }
 
