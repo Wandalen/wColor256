@@ -7,7 +7,7 @@ Collection of cross-platform routines to operate colors conveniently. Extends ba
 git clone https://github.com/Wandalen/wColor256
 cd wColor256
 npm install
-node sample/Sample.s
+node sample/trivial/Sample.s
 ```
 
 ## To add to your project
