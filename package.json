@@ -15,15 +15,15 @@
       "email": "volodymyr.migdal@gmail.com"
     }
   ],
-  "main": "proto/wtools/amid/color/Color256.s",
+  "main": "proto/wtools/amid/l1/color/Color256.s",
   "files": [
-    "proto/wtools/amid/color",
+    "proto/wtools/amid/l1/color",
     "proto/wtools/Tools.s",
     "out"
   ],
   "directories": {
     "doc": "doc",
-    "main": "proto/wtools/amid/color/Color256.s"
+    "main": "proto/wtools/amid/l1/color/Color256.s"
   },
   "scripts": {
     "test": "wtest .run 'proto/**' rapidity:-1",
