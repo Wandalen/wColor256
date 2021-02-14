@@ -8,7 +8,6 @@
   @module Tools/mid/Color256
 */
 
-debugger;
 if( typeof module !== 'undefined' )
 {
   let _ = require( '../include/Color256.s' );
