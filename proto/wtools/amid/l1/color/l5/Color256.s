@@ -2,8 +2,8 @@
 
 'use strict';
 
-let _ = _global_.wTools;
-let Self = _.color = _.color || Object.create( null );
+const _ = _global_.wTools;
+const Self = _.color = _.color || Object.create( null );
 
 // --
 // var
