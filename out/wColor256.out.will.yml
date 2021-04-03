@@ -2,15 +2,12 @@ format: outwillfile-2.0
 root:
   - wColor256.out
 consistency:
-  wColor256.out.will.yml: &ref_0
-    hash: 86849c68116745762d28b3b8aa86ee9e
-    size: 39251
-  ../.ex.will.yml: &ref_1
+  ../.ex.will.yml: &ref_0
     hash: f7de719ca4fe42e3cb7e4bb56da8adc2
     size: 2304
-  ../.im.will.yml: &ref_2
-    hash: f8da7f5b15bb77b07d71d86d3c7dc2bc
-    size: 5019
+  ../.im.will.yml: &ref_1
+    hash: e0939707d67199e870ccb327d6f6bad9
+    size: 5005
 module:
   wColor256.out:
     about:
@@ -27,11 +24,11 @@ module:
         sophisticated operations with colors.
       enabled: 1
       version: 0.4.0
-      interpreters:
+      interpreters: &ref_2
         - njs >= 10.0.0
         - chrome >= 60.0.0
         - firefox >= 60.0.0
-      keywords:
+      keywords: &ref_3
         - wTools
         - color
         - colors
@@ -43,11 +40,11 @@ module:
         - hsl
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
+      contributors: &ref_4
         - Kostiantyn Wandalen <wanalen@01.school>
         - Volodymyr M. <volodymyr.migdal@gmail.com>
       npm.name: wColor256
-      npm.scripts:
+      npm.scripts: &ref_5
         test: wtest .run proto/**
         docgen: wdocgen .build proto
     path:
@@ -78,7 +75,7 @@ module:
       download:
         criterion:
           predefined: 1
-        path: ../
+        path: ..
       repository:
         path: 'git+https:///github.com/Wandalen/wColor.git'
       origins:
@@ -159,6 +156,10 @@ module:
           raw: compiled
           content: prime
         path: '{path::out.*=}/source/Index.s'
+      npm.proto.entry:
+        path:
+          - ../proto/wtools/amid/l1/color/entry/Color256.s
+          - ../proto/node_modules/wColor256
       exported.dir.proto.export:
         criterion:
           generated: 1
@@ -717,24 +718,6 @@ module:
           content: prime
         inherit:
           - files.transpile
-      exported.proto.export:
-        opts:
-          filePath: 'reflector::exported.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
-      exported.files.proto.export:
-        opts:
-          filePath: 'reflector::exported.files.proto.export'
-        criterion:
-          generated: 1
-          content: proto
-          export: 1
-        inherit:
-          - files.reflect
     build:
       proto.export:
         steps:
@@ -823,9 +806,8 @@ module:
           content: proto
           export: 1
     consistency:
-      wColor256.out.will.yml: *ref_0
-      ../.ex.will.yml: *ref_1
-      ../.im.will.yml: *ref_2
+      ../.ex.will.yml: *ref_0
+      ../.im.will.yml: *ref_1
   ../:
     about:
       name: wColor256
@@ -841,29 +823,13 @@ module:
         sophisticated operations with colors.
       enabled: 1
       version: 0.4.0
-      interpreters:
-        - njs >= 10.0.0
-        - chrome >= 60.0.0
-        - firefox >= 60.0.0
-      keywords:
-        - wTools
-        - color
-        - colors
-        - colorful
-        - color conversion
-        - convert color
-        - rgb
-        - rgba
-        - hsl
+      interpreters: *ref_2
+      keywords: *ref_3
       license: MIT
       author: Kostiantyn Wandalen <wanalen@01.school>
-      contributors:
-        - Kostiantyn Wandalen <wanalen@01.school>
-        - Volodymyr M. <volodymyr.migdal@gmail.com>
+      contributors: *ref_4
       npm.name: wColor256
-      npm.scripts:
-        test: wtest .run proto/**
-        docgen: wdocgen .build proto
+      npm.scripts: *ref_5
     path:
       module.willfiles:
         criterion:
@@ -892,7 +858,7 @@ module:
       download:
         criterion:
           predefined: 1
-        path: ./
+        path: .
       repository:
         path: 'git+https:///github.com/Wandalen/wColor.git'
       origins:
@@ -973,6 +939,10 @@ module:
           raw: compiled
           content: prime
         path: '{path::out.*=}/source/Index.s'
+      npm.proto.entry:
+        path:
+          - proto/wtools/amid/l1/color/entry/Color256.s
+          - proto/node_modules/wColor256
     submodule:
       wTools:
         path: 'npm:///wTools'
@@ -1529,6 +1499,5 @@ module:
         hash: f7de719ca4fe42e3cb7e4bb56da8adc2
         size: 2304
       ../.im.will.yml:
-        hash: f8da7f5b15bb77b07d71d86d3c7dc2bc
-        size: 5019
-      wColor256.out.will.yml: *ref_0
+        hash: e0939707d67199e870ccb327d6f6bad9
+        size: 5005
