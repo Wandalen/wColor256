@@ -10,7 +10,7 @@
 
 if( typeof module !== 'undefined' )
 {
-  let _ = require( '../include/Color256.s' );
+  const _ = require( '../include/Color256.s' );
   module[ 'exports' ] = _global_.wTools;
 }
 

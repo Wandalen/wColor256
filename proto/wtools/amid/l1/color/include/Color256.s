@@ -7,7 +7,7 @@
 
 if( typeof module !== 'undefined' )
 {
-  let _ = require( './Basic.s' );
+  const _ = require( './Basic.s' );
   _.include( 'wColor' );
   require( '../l5/Color256.s' );
   module[ 'exports' ] = _global_.wTools;
