@@ -343,9 +343,9 @@ var Extension =
 
 //
 
-_.mapSupplement( _.color, Extension );
-_.mapSupplement( _.color.ColorMap, ColorMap );
-_.mapSupplement( _.color.ColorMap, ColorMapShell );
+_.props.supplement( _.color, Extension );
+_.props.supplement( _.color.ColorMap, ColorMap );
+_.props.supplement( _.color.ColorMap, ColorMapShell );
 
 // --
 // export
