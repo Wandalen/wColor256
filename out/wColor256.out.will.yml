@@ -3,8 +3,8 @@ root:
   - wColor256.out
 consistency:
   ../will.yml: &ref_0
-    hash: 99742cc3b7be183d275358f4fd4e2f1b
-    size: 7065
+    hash: 386426ae918cb9bb85c1f26cabe71abd
+    size: 6924
 module:
   wColor256.out:
     about:
@@ -385,9 +385,6 @@ module:
           content: npm
         inherit:
           - module.export
-      npm.publish:
-        opts:
-          shell: npm publish
       npm.generate.debug.raw:
         opts:
           entryPath: 'path::entry.out.*=1'
@@ -723,12 +720,6 @@ module:
           - 'step::doc.export'
         criterion:
           content: doc
-          export: 1
-      npm.export:
-        steps:
-          - 'step::npm.publish'
-        criterion:
-          content: npm
           export: 1
       export:
         steps:
@@ -1082,9 +1073,6 @@ module:
           content: npm
         inherit:
           - module.export
-      npm.publish:
-        opts:
-          shell: npm publish
       npm.generate.debug.raw:
         opts:
           entryPath: 'path::entry.out.*=1'
@@ -1421,12 +1409,6 @@ module:
         criterion:
           content: doc
           export: 1
-      npm.export:
-        steps:
-          - 'step::npm.publish'
-        criterion:
-          content: npm
-          export: 1
       export:
         steps:
           - 'build::proto.export'
@@ -1484,5 +1466,5 @@ module:
           - 'build::npm'
     consistency:
       ../will.yml:
-        hash: 99742cc3b7be183d275358f4fd4e2f1b
-        size: 7065
+        hash: 386426ae918cb9bb85c1f26cabe71abd
+        size: 6924
