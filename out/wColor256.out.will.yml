@@ -3,8 +3,8 @@ root:
   - wColor256.out
 consistency:
   ../will.yml: &ref_0
-    hash: 386426ae918cb9bb85c1f26cabe71abd
-    size: 6924
+    hash: 7f05b0fc8cc4a3f1f4040bafb2f0e613
+    size: 6932
 module:
   wColor256.out:
     about:
@@ -1466,5 +1466,5 @@ module:
           - 'build::npm'
     consistency:
       ../will.yml:
-        hash: 386426ae918cb9bb85c1f26cabe71abd
-        size: 6924
+        hash: 7f05b0fc8cc4a3f1f4040bafb2f0e613
+        size: 6932
